@@ -1,7 +1,7 @@
 import os
 import requests
 
-BASE_URL = os.getenv("TITAN_API_BASE_URL", "http://127.0.0.1:8000")
+BASE_URL = os.getenv("TITAN_API_BASE_URL", "http://127.0.0.1:8010")
 
 
 def start_incident(payload: dict) -> dict:
