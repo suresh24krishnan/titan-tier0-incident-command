@@ -1,0 +1,42 @@
+[
+  {
+    "agent_id": "detection-agent",
+    "name": "Detection Agent",
+    "capability": "incident-detection",
+    "endpoint": "internal://detection-agent",
+    "status": "active",
+    "allowed_callers": ["system"]
+  },
+  {
+    "agent_id": "diagnostics-agent",
+    "name": "Diagnostics Agent",
+    "capability": "incident-diagnostics",
+    "endpoint": "internal://diagnostics-agent",
+    "status": "active",
+    "allowed_callers": ["detection-agent", "system"]
+  },
+  {
+    "agent_id": "knowledge-agent",
+    "name": "Knowledge Agent",
+    "capability": "runbook-lookup",
+    "endpoint": "internal://knowledge-agent",
+    "status": "active",
+    "allowed_callers": ["diagnostics-agent", "system"]
+  },
+  {
+    "agent_id": "risk-agent",
+    "name": "Risk Agent",
+    "capability": "incident-risk-assessment",
+    "endpoint": "internal://risk-agent",
+    "status": "active",
+    "allowed_callers": ["knowledge-agent", "system"]
+  },
+  {
+    "agent_id": "remediation-agent",
+    "name": "Remediation Agent",
+    "capability": "incident-remediation",
+    "endpoint": "internal://remediation-agent",
+    "status": "active",
+    "allowed_callers": ["risk-agent", "system"]
+  }
+]

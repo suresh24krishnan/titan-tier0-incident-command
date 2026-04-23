@@ -1,0 +1,57 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# Local runtime / temp
+*.sqlite3
+*.db
+tmp/
+temp/
+
+# Streamlit / cache
+.streamlit/secrets.toml
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (IMPORTANT FIX)
+data/*
+!data/agents_registry.json
+!data/.gitkeep
+data/ledger.jsonl
+
+# Optional
+*.tar
+*.gz
+
+data/*
+!data/agents_registry.json
+!data/.gitkeep
+data/ledger.jsonl
